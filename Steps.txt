@@ -1,0 +1,14 @@
+python3 -m venv env-pymongo-fastapi-crud
+source env-pymongo-fastapi-crud/bin/activate
+
+python -m pip install 'fastapi[all]' 'pymongo[srv]' python-dotenv
+
+mkdir pymongo-fastapi-crud
+cd pymongo-fastapi-crud
+touch main.py routes.py models.py .env
+
+
+---------------------
+
+
+python -m uvicorn main:app --reload
